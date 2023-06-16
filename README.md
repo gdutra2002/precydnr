@@ -33,7 +33,7 @@ See MIT license
 
 ### Features
 >
->* github, npm inquery, terminal, JavaScript, MySQL, Node.js, Express.js
+>* github, npm inquery, terminal, JavaScript, Sequelize, MySQL, Node.js, Express.js
 >
 
 ## How to Contribute
