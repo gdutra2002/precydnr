@@ -14,7 +14,10 @@ Category.init(
       autoIncrement: true,
     },
     // category-seeds
-    
+    category_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
 
   },
   {
