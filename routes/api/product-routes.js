@@ -10,6 +10,8 @@ Product.findAll({
 })
   // find all products
   // be sure to include its associated Category and Tag data
+  .then((product) => res.status(200).json(product))
+  .catch((err) => res.status(500).json(err));
 });
 
 // get one product
@@ -23,7 +25,8 @@ router.get('/:id', (req, res) => {
     include: [Category, 
       {model: Tag, through: ProductTag,}]
   })
-
+  .then((product) => res.status(200).json(product))
+  .catch((err) => res.status(400).json(err));
 });
 
 // create new product
@@ -71,7 +74,7 @@ router.put('/:id', (req, res) => {
     .then((product) => {
       if (req.body.tagIds && req.body.tagIds.length) {
 
-        ProductTag.findAll({
+      ProductTag.findAll({
           where: { product_id: req.params.id }
         }).then((productTags) => {
           // create filtered list of new tag_ids
@@ -109,8 +112,9 @@ router.delete('/:id', (req, res) => {
   // delete one product by its `id` value
   Product.delete(req.body, { where: {
     id: req.params.id,
-  }});
-
+  }})
+  .then((product) => res.status(200).json(product))
+  .catch((err) => res.status(400).json(err));
 });
 
 module.exports = router;
