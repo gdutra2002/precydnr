@@ -26,7 +26,9 @@ mysql> exit
 $ node server.js
 ```
 
-- [ ] [WalkThruVideo]https://drive.google.com/file/d/1sVYdPFcebUG0UuPC-ivdf8RLk-SU7gI3/view
+- [ ] [WalkThruVideo]https://drive.google.com/file/d/1zlBweuhrRIxvKmom125DWGWVT7ek0xGh/view
+
+![precyndrScreenshot](02precyndrScreenshot.png)
 
 ## Credits
 
